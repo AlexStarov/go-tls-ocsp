@@ -35,6 +35,7 @@ server := &http.Server{
 
 // Запускаем HTTPS-сервер
 log.Fatal(server.ListenAndServeTLS("", ""))
+```
 
 
 ## 🛡️ License
