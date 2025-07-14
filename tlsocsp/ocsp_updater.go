@@ -8,6 +8,7 @@ import (
 	"encoding/pem"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 
 	"golang.org/x/crypto/ocsp"
@@ -54,6 +55,7 @@ func (u *Updater) GenerateTLSCertificate() (*tls.Certificate, error) {
 	}
 
 	if len(leaf.OCSPServer) == 0 {
+		log.Println("[tlsocsp] No OCSP server found in certificate")
 		return nil, fmt.Errorf("no OCSP server found")
 	}
 	ocspURL := leaf.OCSPServer[0]
