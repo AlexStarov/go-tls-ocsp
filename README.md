@@ -10,7 +10,7 @@ This package provides:
 
 ## 📦 Installation
 
-go get github.com/your-username/go-tls-ocsp
+go get github.com/AlexStarov/go-tls-ocsp
 
 
 ## 🧩 Usage
